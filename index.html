@@ -24,7 +24,9 @@
             <span class="nav-toggler-icon"></span>
             <span class="nav-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="collapse navbar-collapse js-navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav-wrapper">
+            </div>
             <div class="navbar-nav">
               <a class="nav-link site-header__nav-link" aria-current="page" href="#">Home</a>
               <a class="nav-link site-header__nav-link" href="#">Recipes</a>
@@ -35,9 +37,16 @@
           </div>
         </div> 
       </nav>
-      <a href="#" class="button site-header__search">
+      <div class="input-group ">
+        <div class="form-outline" data-mdb-input-init>
+          <input type="search" class="form-control" id="form1" >
+          <label class="form-label" for="form1">Search</label>
+        </div>
+        <button type="button" id="search-button" class="btn site-header__search search js-search site-header__search"></button>
+      </div>
+      <!-- <a href="#" class="button site-header__search">
         <div class="search site-header__search-icon"></div>
-      </a>
+      </a> -->
     </div>
   </div>
 
@@ -298,7 +307,7 @@
         <div class="footer-grid__col">
           <div class="logo footer-logo">
             <a href="#" class="site-logo">
-              <p class="logo-body">Premium <span class="logo-span">CAR</span></p>
+              <p class="logo-body justify-content-start">Premium <span class="logo-span">CAR</span></p>
             </a>
             <div class="logo__desc">
               Short description about the company Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -352,7 +361,7 @@
         </div>
         <div class="footer-grid__col">
           <div class="site-footer__caption">Newsletter</div>
-          <form action="#" method="post">
+          <form class="footer-grid__form" action="#" method="post">
             <input class="newsletter__name site-footer__newsletter-name" type="text" id="name" name="user_name" placeholder="Your name">
             <input class="newsletter__email site-footer__newsletter-email" type="email" id="email" name="user_email" placeholder="Your email adress">
             <button class="newsletter__btn btn-open site-footer__newsletter-btn" type="submit">Subscribe to newsletter</button>
@@ -375,6 +384,7 @@
   </div>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
